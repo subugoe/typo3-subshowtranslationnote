@@ -31,7 +31,6 @@ $tempColumns = array(
 		'config' => array('type' => 'check')
 	)
 );
-t3lib_div::loadTCA('pages');
-t3lib_extMgm::addTCAcolumns('pages', $tempColumns, 1);
-t3lib_extMgm::addToAllTCAtypes('pages', 'tx_subshowtranslationnote;;;;1-1-1');
-?>
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $tempColumns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages', 'tx_subshowtranslationnote;;;;1-1-1');
